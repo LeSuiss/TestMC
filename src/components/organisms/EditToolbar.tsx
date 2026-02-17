@@ -14,6 +14,44 @@ interface EditToolbarProps {
   onDeleteSelected: () => void
 }
 
+const wrapperStyle: CSSProperties = {
+  alignItems: 'center',
+  borderBottom: `1px solid ${theme.colors.border}`,
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '14px',
+  justifyContent: 'space-between',
+  minHeight: '64px',
+  padding: '8px 24px',
+}
+
+const leftStyle: CSSProperties = {
+  alignItems: 'center',
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '14px',
+}
+
+const actionsStyle: CSSProperties = {
+  alignItems: 'center',
+  display: 'inline-flex',
+  gap: '8px',
+}
+
+const countStyle: CSSProperties = {
+  color: theme.colors.text,
+  fontSize: '16px',
+  fontWeight: 600,
+  margin: 0,
+}
+
+const helperStyle: CSSProperties = {
+  color: theme.colors.mutedText,
+  fontSize: '13px',
+  fontWeight: 500,
+  margin: 0,
+}
+
 function CopyIcon() {
   return (
     <svg
@@ -55,44 +93,6 @@ export function EditToolbar({
   onDuplicateSelected,
   onDeleteSelected,
 }: EditToolbarProps) {
-  const wrapperStyle: CSSProperties = {
-    alignItems: 'center',
-    borderBottom: `1px solid ${theme.colors.border}`,
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '14px',
-    justifyContent: 'space-between',
-    minHeight: '64px',
-    padding: '8px 24px',
-  }
-
-  const leftStyle: CSSProperties = {
-    alignItems: 'center',
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '14px',
-  }
-
-  const actionsStyle: CSSProperties = {
-    alignItems: 'center',
-    display: 'inline-flex',
-    gap: '8px',
-  }
-
-  const countStyle: CSSProperties = {
-    color: theme.colors.text,
-    fontSize: '16px',
-    fontWeight: 600,
-    margin: 0,
-  }
-
-  const helperStyle: CSSProperties = {
-    color: theme.colors.mutedText,
-    fontSize: '13px',
-    fontWeight: 500,
-    margin: 0,
-  }
-
   const hasUsers = totalItems > 0
   const canRunActions = hasUsers && selectedCount > 0
 

@@ -6,6 +6,18 @@ interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
 }
 
+const baseIconButtonStyle: CSSProperties = {
+  alignItems: 'center',
+  background: 'transparent',
+  border: 'none',
+  borderRadius: '4px',
+  color: theme.colors.icon,
+  display: 'inline-flex',
+  height: '34px',
+  justifyContent: 'center',
+  width: '34px',
+}
+
 export function IconButton({
   disabled = false,
   style,
@@ -13,22 +25,19 @@ export function IconButton({
   ...buttonProps
 }: IconButtonProps) {
   const componentStyle: CSSProperties = {
-    alignItems: 'center',
-    background: 'transparent',
-    border: 'none',
-    borderRadius: '4px',
-    color: theme.colors.icon,
+    ...baseIconButtonStyle,
     cursor: disabled ? 'not-allowed' : 'pointer',
-    display: 'inline-flex',
-    height: '34px',
-    justifyContent: 'center',
     opacity: disabled ? 0.45 : 1,
-    width: '34px',
     ...style,
   }
 
   return (
-    <button type="button" disabled={disabled} style={componentStyle} {...buttonProps}>
+    <button
+      type="button"
+      disabled={disabled}
+      style={componentStyle}
+      {...buttonProps}
+    >
       {children}
     </button>
   )

@@ -9,6 +9,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
 }
 
+const baseButtonStyle: CSSProperties = {
+  border: 'none',
+  borderRadius: theme.radius.sm,
+  fontWeight: 600,
+  padding: '10px 14px',
+  transition: 'transform 0.1s ease, opacity 0.2s ease',
+}
+
 const variantStyles: Record<ButtonVariant, CSSProperties> = {
   primary: {
     backgroundColor: theme.colors.primary,
@@ -33,19 +41,20 @@ export function Button({
   ...buttonProps
 }: ButtonProps) {
   const componentStyle: CSSProperties = {
-    border: 'none',
-    borderRadius: theme.radius.sm,
+    ...baseButtonStyle,
     cursor: disabled ? 'not-allowed' : 'pointer',
-    fontWeight: 600,
-    padding: '10px 14px',
-    transition: 'transform 0.1s ease, opacity 0.2s ease',
     opacity: disabled ? 0.55 : 1,
     ...variantStyles[variant],
     ...style,
   }
 
   return (
-    <button type="button" disabled={disabled} style={componentStyle} {...buttonProps}>
+    <button
+      type="button"
+      disabled={disabled}
+      style={componentStyle}
+      {...buttonProps}
+    >
       {children}
     </button>
   )

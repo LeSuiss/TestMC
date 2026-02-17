@@ -7,25 +7,29 @@ interface BadgeProps {
   tone?: 'neutral' | 'success'
 }
 
-export function Badge({ text, tone = 'neutral' }: BadgeProps) {
-  const tones: Record<NonNullable<BadgeProps['tone']>, CSSProperties> = {
-    neutral: {
-      backgroundColor: theme.colors.subtle,
-      color: theme.colors.mutedText,
-    },
-    success: {
-      backgroundColor: '#e8f7ee',
-      color: theme.colors.success,
-    },
-  }
+const baseBadgeStyle: CSSProperties = {
+  borderRadius: '999px',
+  fontSize: '12px',
+  fontWeight: 600,
+  padding: '4px 10px',
+  whiteSpace: 'nowrap',
+}
 
+const toneStyles: Record<NonNullable<BadgeProps['tone']>, CSSProperties> = {
+  neutral: {
+    backgroundColor: theme.colors.subtle,
+    color: theme.colors.mutedText,
+  },
+  success: {
+    backgroundColor: '#e8f7ee',
+    color: theme.colors.success,
+  },
+}
+
+export function Badge({ text, tone = 'neutral' }: BadgeProps) {
   const style: CSSProperties = {
-    borderRadius: '999px',
-    fontSize: '12px',
-    fontWeight: 600,
-    padding: '4px 10px',
-    whiteSpace: 'nowrap',
-    ...tones[tone],
+    ...baseBadgeStyle,
+    ...toneStyles[tone],
   }
 
   return <span style={style}>{text}</span>

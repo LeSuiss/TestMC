@@ -6,6 +6,7 @@ import {
 } from '../services/githubApi'
 import type { GithubApiUser } from '../types/github'
 import { useDebouncedValue } from './useDebouncedValue'
+import { useQueryCache } from './useQueryCache'
 
 const DEBOUNCE_DELAY_IN_MS = 350
 
@@ -29,9 +30,8 @@ interface RequestState {
 
 export function useGithubUsersSearch(query: string): UseGithubUsersSearchResult {
   const debouncedQuery = useDebouncedValue(query, DEBOUNCE_DELAY_IN_MS)
-  const [cacheByQuery, setCacheByQuery] = useState<
-    Record<string, GithubApiUser[]>
-  >({})
+  const { getValue: getCachedUsers, setValue: setCachedUsers } =
+    useQueryCache<GithubApiUser[]>()
   const latestRequestRef = useRef(0)
   const [requestState, setRequestState] = useState<RequestState>({
     users: [],
@@ -47,7 +47,7 @@ export function useGithubUsersSearch(query: string): UseGithubUsersSearchResult 
       return
     }
 
-    const cachedUsers = cacheByQuery[normalizedQuery]
+    const cachedUsers = getCachedUsers(normalizedQuery)
     if (cachedUsers) {
       return
     }
@@ -70,10 +70,7 @@ export function useGithubUsersSearch(query: string): UseGithubUsersSearchResult 
           return
         }
 
-        setCacheByQuery((previousCacheByQuery) => ({
-          ...previousCacheByQuery,
-          [normalizedQuery]: users,
-        }))
+        setCachedUsers(normalizedQuery, users)
         setRequestState({
           users,
           errorMessage: null,
@@ -106,7 +103,7 @@ export function useGithubUsersSearch(query: string): UseGithubUsersSearchResult 
     return () => {
       abortController.abort()
     }
-  }, [cacheByQuery, debouncedQuery])
+  }, [debouncedQuery, getCachedUsers, setCachedUsers])
 
   const normalizedDebouncedQuery = debouncedQuery.trim()
 
@@ -120,7 +117,7 @@ export function useGithubUsersSearch(query: string): UseGithubUsersSearchResult 
     }
   }
 
-  const cachedUsers = cacheByQuery[normalizedDebouncedQuery]
+  const cachedUsers = getCachedUsers(normalizedDebouncedQuery)
   if (cachedUsers) {
     return {
       users: cachedUsers,
