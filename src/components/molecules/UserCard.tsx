@@ -101,7 +101,7 @@ export function UserCard({
   return (
     <article style={containerStyle}>
       <div style={checkboxRowStyle}>
-        {isEditMode ? (
+        {isEditMode && (
           <Checkbox
             label={`Sélectionner ${user.login}`}
             checked={isSelected}
@@ -109,7 +109,7 @@ export function UserCard({
             size={14}
             onChange={(checked) => onSelectionChange(user.instanceId, checked)}
           />
-        ) : null}
+        )}
       </div>
       <div style={avatarContainerStyle}>
         <Avatar src={user.avatarUrl} alt={`Avatar ${user.login}`} />

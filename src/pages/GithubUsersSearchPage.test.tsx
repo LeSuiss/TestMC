@@ -56,7 +56,7 @@ describe('GithubUsersSearchPage', () => {
     })
 
     expect(
-      await screen.findByText('Aucun résultat pour cette recherche.')
+      await screen.findByText('No results for this search.')
     ).toBeInTheDocument()
   })
 

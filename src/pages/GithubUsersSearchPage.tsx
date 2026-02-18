@@ -4,10 +4,14 @@ import { GithubUsersSearchTemplate } from '../components/templates/GithubUsersSe
 import { useEditableUserCards } from '../hooks/useEditableUserCards'
 import { useGithubUsersSearch } from '../hooks/useGithubUsersSearch'
 import { useSearchFeedback } from '../hooks/useSearchFeedback'
-import type { GithubApiUser, UserCardModel } from '../types/github'
 
-function mapGithubUsersToCardModels(users: GithubApiUser[]): UserCardModel[] {
-  return users.map((user, index) => ({
+
+
+export function GithubUsersSearchPage() {
+  const [query, setQuery] = useState('')
+  const { users, isLoading, errorMessage, hasSearched, debouncedQuery } =
+    useGithubUsersSearch(query)
+  const baseUsers = useMemo(() => users.map((user, index) => ({
     instanceId: `${user.id}-${index}`,
     githubId: user.id,
     login: user.login,
@@ -15,14 +19,7 @@ function mapGithubUsersToCardModels(users: GithubApiUser[]): UserCardModel[] {
     profileUrl: user.html_url,
     type: user.type,
     duplicatedFromId: null,
-  }))
-}
-
-export function GithubUsersSearchPage() {
-  const [query, setQuery] = useState('')
-  const { users, isLoading, errorMessage, hasSearched, debouncedQuery } =
-    useGithubUsersSearch(query)
-  const baseUsers = useMemo(() => mapGithubUsersToCardModels(users), [users])
+  })), [users])
   const {
     isEditMode,
     visibleUsers,

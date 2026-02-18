@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import {
   SearchGithubUsersError,
   searchGithubUsers,
-} from '../services/githubApi'
+} from '../api/githubApi'
 import type { GithubApiUser } from '../types/github'
 import { useDebouncedValue } from './useDebouncedValue'
 import { useQueryCache } from './useQueryCache'

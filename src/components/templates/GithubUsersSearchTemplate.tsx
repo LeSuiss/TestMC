@@ -154,10 +154,10 @@ export function GithubUsersSearchTemplate({
 
           <section style={gridAreaStyle}>
             <div style={feedbackWrapStyle}>
-              {feedback ? <FeedbackState type={feedback.type} message={feedback.message} /> : null}
+              {!!feedback && <FeedbackState type={feedback.type} message={feedback.message} />}
             </div>
 
-            {users.length > 0 ? (
+            {!!users.length  &&
               <div style={gridScrollStyle}>
                 <UsersGrid
                   users={users}
@@ -166,7 +166,7 @@ export function GithubUsersSearchTemplate({
                   onUserSelectionChange={onUserSelectionChange}
                 />
               </div>
-            ) : null}
+            }
           </section>
         </div>
       </div>

@@ -24,14 +24,14 @@ export function useSearchFeedback({
     if (!debouncedQuery.trim()) {
       return {
         type: 'idle',
-        message: 'Commencez à saisir un login GitHub pour lancer une recherche.',
+        message: 'Start typing a GitHub username to search.',
       }
     }
 
     if (isLoading) {
       return {
         type: 'loading',
-        message: 'Interrogation de GitHub API...',
+        message: 'Querying GitHub API...',
       }
     }
 
@@ -45,7 +45,7 @@ export function useSearchFeedback({
     if (hasSearched && resultCount === 0) {
       return {
         type: 'empty',
-        message: 'Aucun résultat pour cette recherche.',
+        message: 'No results for this search.',
       }
     }
 
