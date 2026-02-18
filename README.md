@@ -17,8 +17,8 @@ Le projet suit une structure proche Atomic Design:
 - `src/components/organisms`: blocs métiers (`EditToolbar`, `UsersGrid`, `FeedbackState`)
 - `src/components/templates`: composition de la page (`GithubUsersSearchTemplate`)
 - `src/pages`: orchestration de la logique (`GithubUsersSearchPage`)
-- `src/hooks`: hooks techniques (`useDebouncedValue`, `useGithubUsersSearch`)
-- `src/services`: accès API GitHub (`githubApi`)
+- `src/hooks`: hooks techniques (`useDebouncedValue`, `useGithubUsersSearch`, `useVirtualGrid`, etc.)
+- `src/api`: accès API GitHub (`githubApi`)
 - `src/styles`: tokens + styles globaux injectés via React
 
 ## Choix techniques
@@ -44,6 +44,27 @@ npm run dev
 ```bash
 npm run lint
 npm run test
+```
+
+## Docker
+
+Build + run avec Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+Application disponible sur:
+
+```text
+http://localhost:8080
+```
+
+Option sans Compose:
+
+```bash
+docker build -t testmc .
+docker run --rm -p 8080:8080 testmc
 ```
 
 ## Tests
