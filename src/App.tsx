@@ -1,11 +1,11 @@
-import { GithubUsersSearchPage } from './pages/GithubUsersSearchPage'
+import { CvPage } from './pages/CvPage'
 import { GlobalStyles } from './styles/GlobalStyles'
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <GithubUsersSearchPage />
+      <CvPage />
     </>
   )
 }

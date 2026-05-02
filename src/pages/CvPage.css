@@ -1,0 +1,472 @@
+.cv-page {
+  min-height: 100vh;
+  padding: 1.5rem 1rem 3rem;
+  background: #e8eaee;
+}
+
+.cv-toolbar {
+  max-width: 210mm;
+  margin: 0 auto 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.cv-toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.cv-toolbar-lang {
+  display: inline-flex;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #cbd5e0;
+}
+
+.cv-lang-btn {
+  appearance: none;
+  margin: 0;
+  border: none;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #4a5568;
+  background: #fff;
+  cursor: pointer;
+}
+
+.cv-lang-btn + .cv-lang-btn {
+  border-left: 1px solid #cbd5e0;
+}
+
+.cv-lang-btn.is-active {
+  background: #1a365d;
+  color: #fff;
+}
+
+.cv-lang-btn:focus-visible {
+  outline: 2px solid #4298e6;
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.cv-toolbar-hint {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+.cv-print-btn {
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background: #1a365d;
+  cursor: pointer;
+}
+
+.cv-print-btn:hover {
+  background: #2c5282;
+}
+
+.cv-print-btn:focus-visible {
+  outline: 2px solid #4298e6;
+  outline-offset: 2px;
+}
+
+.cv-sheet {
+  max-width: 210mm;
+  margin: 0 auto;
+  background: #fff;
+  color: #1a202c;
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cv-inner {
+  position: relative;
+  padding: 11mm 14mm 12mm;
+}
+
+/**
+ * Mots-clés ATS (FR + EN) : masqués à l’œil, présents dans le PDF pour extraction texte.
+ * Les deux lang= permettent aux analyseurs d’associer le bon jeu de termes.
+ */
+.cv-ats-keywords {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: normal;
+  border: 0;
+}
+
+.cv-ats-keywords-lang {
+  display: block;
+}
+
+.cv-header {
+  border-bottom: 2px solid #1a365d;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cv-name {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1a365d;
+}
+
+.cv-headline {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.cv-contact {
+  margin: 0.6rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  font-size: 0.8125rem;
+  color: #4a5568;
+}
+
+.cv-contact a {
+  color: #2b6cb0;
+  text-decoration: none;
+}
+
+.cv-contact a:hover {
+  text-decoration: underline;
+}
+
+/* LinkedIn / GitHub : libellé cliquable à l’écran ; URL complète visible à l’impression / PDF. */
+.cv-contact-print-url {
+  display: none;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 32%) 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.cv-sidebar section + section {
+  margin-top: 1.1rem;
+}
+
+.cv-main section + section {
+  margin-top: 1rem;
+}
+
+.cv-section-title {
+  margin: 0 0 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a365d;
+}
+
+.cv-profile {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: #2d3748;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.cv-profile + .cv-profile {
+  margin-top: 0.5rem;
+}
+
+.cv-skill-group + .cv-skill-group {
+  margin-top: 0.65rem;
+}
+
+.cv-skill-label {
+  margin: 0 0 0.2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.cv-skill-list {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #2d3748;
+}
+
+.cv-lang-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: #2d3748;
+}
+
+.cv-lang-list li + li {
+  margin-top: 0.25rem;
+}
+
+.cv-lang-name {
+  font-weight: 600;
+}
+
+.cv-lang-level {
+  color: #4a5568;
+}
+
+.cv-interests-list {
+  margin: 0;
+  padding-left: 1rem;
+  list-style-type: disc;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: #2d3748;
+}
+
+.cv-interests-list li + li {
+  margin-top: 0.3rem;
+}
+
+.cv-job {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv-job + .cv-job {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.cv-job-header {
+  margin: 0;
+}
+
+.cv-job-title {
+  margin: 0;
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #1a202c;
+}
+
+.cv-job-role {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.cv-job-title-sep {
+  font-weight: 600;
+  color: #a0aec0;
+}
+
+.cv-job-company {
+  font-weight: 600;
+  color: #2b6cb0;
+}
+
+.cv-job-meta {
+  margin: 0.2rem 0 0;
+  font-size: 0.72rem;
+  color: #718096;
+  line-height: 1.3;
+}
+
+/* Ligne stack / outils : toujours en tête du bloc mission, bandeau discret à gauche */
+.cv-job-stack {
+  margin: 0.35rem 0 0.4rem;
+  padding: 0.4rem 0.5rem 0.4rem 0.6rem;
+  border-left: 3px solid #1a365d;
+  background: #f7fafc;
+  font-size: 0.74rem;
+  line-height: 1.42;
+  color: #2d3748;
+}
+
+.cv-job-stack-kicker {
+  font-weight: 700;
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #1a365d;
+}
+
+.cv-job-stack-text {
+  font-weight: 500;
+}
+
+.cv-job-bullets {
+  margin: 0.35rem 0 0;
+  padding-left: 1.05rem;
+  font-size: 0.78rem;
+  line-height: 1.42;
+  color: #2d3748;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  list-style-type: disc;
+}
+
+.cv-job-bullets li + li {
+  margin-top: 0.22rem;
+}
+
+@media (max-width: 720px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  .cv-page {
+    padding: 0;
+    background: #fff;
+  }
+
+  .cv-toolbar {
+    display: none;
+  }
+
+  .cv-sheet {
+    max-width: none;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .cv-inner {
+    padding: 0;
+  }
+
+  .cv-page,
+  .cv-sheet,
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv-grid {
+    gap: 1rem;
+  }
+
+  .cv-name {
+    font-size: 1.45rem;
+  }
+
+  .cv-profile,
+  .cv-job-bullets,
+  .cv-skill-list,
+  .cv-lang-list,
+  .cv-interests-list {
+    font-size: 9pt;
+    line-height: 1.38;
+  }
+
+  .cv-job {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .cv-section-title {
+    font-size: 8pt;
+  }
+
+  .cv-job-title {
+    font-size: 9.8pt;
+  }
+
+  .cv-job-meta,
+  .cv-skill-label {
+    font-size: 8.5pt;
+  }
+
+  .cv-job-stack {
+    font-size: 8.5pt;
+    line-height: 1.35;
+    padding: 0.3rem 0.4rem 0.3rem 0.5rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv-job-stack-kicker {
+    font-size: 7pt;
+  }
+
+  .cv-contact {
+    font-size: 8.5pt;
+  }
+
+  .cv-contact-link-external .cv-contact-print-url,
+  .cv-contact-link-tel .cv-contact-print-url {
+    display: inline;
+    word-break: break-all;
+  }
+
+  .cv-contact a {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+  }
+
+  .cv-headline {
+    font-size: 10.5pt;
+  }
+
+  .cv-job + .cv-job {
+    margin-top: 0.55rem;
+    padding-top: 0.5rem;
+  }
+
+  .cv-main section + section {
+    margin-top: 0.65rem;
+  }
+
+  .cv-sidebar section + section {
+    margin-top: 0.85rem;
+  }
+
+  /* ATS : même masquage qu’à l’écran, texte toujours présent pour extraction PDF */
+  .cv-ats-keywords {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: normal;
+  }
+}
