@@ -117,6 +117,10 @@
   display: block;
 }
 
+.cv-prompt-injection-test {
+  display: block;
+}
+
 .cv-header {
   border-bottom: 2px solid #1a365d;
   padding-bottom: 0.75rem;
