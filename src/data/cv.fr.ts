@@ -107,9 +107,10 @@ export const cvFr: CvBundle = {
       stack:
         'TypeScript, JavaScript, React, Material UI, TanStack, NestJS, Prisma, PostgreSQL, architecture microservices, DDD, tests unitaires et d’intégration, monitoring Datadog, workflows IA, CI/CD (pipeline et pratiques de l’équipe).',
       bullets: [
-        'Développement full stack sur le produit SaaS à destination des professionnels de santé et des organisations.',
-        'Participation au cycle de delivery : qualité, revues de code, tests unitaires et d’intégration, collaboration avec le produit et l’engineering.',
-        'Contribution à la fiabilité du produit : diagnostic, corrections et intégration dans le rythme de livraison.',
+        'Ownership de bout en bout de fonctionnalités du SaaS santé : cadrage avec le PM, le product designer, les métiers et les équipes techniques, conception, implémentation, monitoring Datadog et suivi en production (déploiements, alertes, incidents et retour arrière si nécessaire).',
+        'Conception et développement du système complet d’export de listes de données : filtres mutualisés, génération de CSV et harmonisation des comportements entre les listes, les exports et les fonctionnalités dépendantes.',
+        'Mise en place d’une suite de tests d’intégration dockerisée couvrant l’intégralité du microservice de l’équipe, complétée par des tests unitaires.',
+        'Encadrement technique d’une alternante sur l’intégralité de son périmètre.',
       ],
     },
     {
