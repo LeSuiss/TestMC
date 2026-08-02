@@ -103,7 +103,7 @@ export const cvEn: CvBundle = {
   experience: [
     {
       role: 'Full-stack developer',
-      company: 'Hublo',
+      company: 'Hublo — French Tech Next40 2026',
       location: 'Paris, France',
       period: 'Sep 2025 – Present',
       stack:
