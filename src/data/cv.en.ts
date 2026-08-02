@@ -107,7 +107,7 @@ export const cvEn: CvBundle = {
       stack:
         'TypeScript, JavaScript, React, Material UI, TanStack, NestJS, Prisma, PostgreSQL, microservices architecture, DDD, unit and integration tests, Datadog monitoring, AI workflows, CI/CD (team pipeline and practices).',
       bullets: [
-        'End-to-end ownership of features for a healthcare SaaS product: scoping with the product manager, product designer, business stakeholders, and engineering teams; design, implementation, Datadog monitoring, and production follow-up (deployments, alerts, incidents, and rollbacks when needed).',
+        'End-to-end ownership of features for a healthcare SaaS product: scoping with the product manager, product designer, business stakeholders, and engineering teams; design, implementation, deployment, Datadog monitoring, and production follow-up.',
         'Designed and developed the complete data-list export system, including shared filters, CSV generation, and consistent behavior across lists, exports, and dependent features.',
         'Built a Dockerized integration test suite covering the team’s entire microservice, complemented by unit tests.',
         'Provided technical mentoring to a work-study developer across her full scope.',
