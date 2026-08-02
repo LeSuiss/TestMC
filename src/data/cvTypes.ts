@@ -2,6 +2,8 @@ export type CvContact = {
   fullName: string
   headline: string
   location: string
+  nationality?: string
+  mobility?: string
   linkedinUrl: string
   githubUrl?: string
   email?: string

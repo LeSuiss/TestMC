@@ -2,7 +2,6 @@ import './CvPage.css'
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
-import { ATS_KEYWORDS_EN, ATS_KEYWORDS_FR } from '../data/atsKeywords'
 import { getCvBundle, type CvExperience } from '../data/cvData'
 
 function readInitialLocale(): 'fr' | 'en' {
@@ -26,15 +25,16 @@ function buildTelHref(visiblePhone: string): string {
   return `tel:${d}`
 }
 
-/** Forme +33 … lisible sur PDF à côté du 07 … */
+/** Forme +33 … lisible sur le CV et dans le PDF. */
 function frenchMobileInternationalDisplay(visiblePhone: string): string {
   const d = frenchMobileDigits(visiblePhone)
   if (d.length === 10 && d.startsWith('0')) {
     const rest = d.slice(1)
     return `+33 ${rest.slice(0, 1)} ${rest.slice(1, 3)} ${rest.slice(3, 5)} ${rest.slice(5, 7)} ${rest.slice(7)}`
   }
-  if (d.startsWith('33') && d.length >= 10) {
-    return `+${d}`
+  if (d.startsWith('33') && d.length === 11) {
+    const rest = d.slice(2)
+    return `+33 ${rest.slice(0, 1)} ${rest.slice(1, 3)} ${rest.slice(3, 5)} ${rest.slice(5, 7)} ${rest.slice(7)}`
   }
   return visiblePhone.trim()
 }
@@ -102,19 +102,13 @@ export function CvPage() {
 
       <article className="cv-sheet" aria-label={locale === 'fr' ? 'Curriculum vitae' : 'Resume'}>
         <div className="cv-inner">
-          <div className="cv-ats-keywords" aria-hidden="true">
-            <span className="cv-ats-keywords-lang" lang="fr">
-              {ATS_KEYWORDS_FR.join(', ')}
-            </span>{' '}
-            <span className="cv-ats-keywords-lang" lang="en">
-              {ATS_KEYWORDS_EN.join(', ')}
-            </span>
-          </div>
           <header className="cv-header">
             <h1 className="cv-name">{contact.fullName}</h1>
             <p className="cv-headline">{contact.headline}</p>
             <ul className="cv-contact">
               <li>{contact.location}</li>
+              {contact.nationality ? <li>{contact.nationality}</li> : null}
+              {contact.mobility ? <li>{contact.mobility}</li> : null}
               <li>
                 <a
                   href={contact.linkedinUrl}
@@ -153,13 +147,15 @@ export function CvPage() {
                   <a
                     href={buildTelHref(contact.phone)}
                     className="cv-contact-link-tel"
-                    aria-label={`${contact.phone} — ${frenchMobileInternationalDisplay(contact.phone)}`}
+                    aria-label={frenchMobileInternationalDisplay(contact.phone)}
                   >
                     <span className="cv-contact-link-label">{contact.phone}</span>
-                    <span className="cv-contact-print-url" aria-hidden="true">
-                      {' — '}
-                      {frenchMobileInternationalDisplay(contact.phone)}
-                    </span>
+                    {contact.phone.trim() !== frenchMobileInternationalDisplay(contact.phone) ? (
+                      <span className="cv-contact-print-url" aria-hidden="true">
+                        {' — '}
+                        {frenchMobileInternationalDisplay(contact.phone)}
+                      </span>
+                    ) : null}
                   </a>
                 </li>
               ) : null}

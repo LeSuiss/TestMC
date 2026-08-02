@@ -26,11 +26,13 @@ export const cvFr: CvBundle = {
     headline:
       'Développeur full stack JavaScript · recul juridique & gestion de projets mobilisables lorsque le contexte l’exige',
     location: 'Aubagne, Provence-Alpes-Côte d’Azur, France',
+    nationality: 'Nationalités : suisse, française',
+    mobility: 'Ouvert à un poste en Suisse romande',
     linkedinUrl: cvContactChannels.linkedinUrl,
   },
   profileParagraphs: [
-    'Développeur full stack avec plus de 6 ans d’expérience sur des applications web et mobiles, dans des contextes produits exigeants (medtech, retail, SaaS santé/RH). Habitué aux exigences de qualité logicielle, à la revue de code et aux livraisons agiles en équipe produit.',
-    'Je vise des postes en développement full stack au sein d’équipes orientées produit, avec des cycles de livraison réguliers, une culture du feedback et des échanges suivis avec les métiers.',
+    'Plus de 6 ans d’expérience dans la conception et l’évolution d’applications web et mobiles, au sein d’environnements produits exigeants (medtech, retail, SaaS santé/RH). Habitué aux exigences de qualité logicielle, à la revue de code et aux livraisons agiles en équipe produit.',
+    'Je souhaite rejoindre une équipe orientée produit, avec des cycles de livraison réguliers, une culture du feedback et une collaboration étroite avec les métiers, notamment en Suisse romande.',
   ],
   languages: [
     { name: 'Français', level: 'langue maternelle' },
@@ -51,18 +53,33 @@ export const cvFr: CvBundle = {
         'TypeScript',
         'Redux',
         'Material UI',
-        'GraphQL / Apollo',
-        'Sass',
-        'Webpack',
+        'TanStack',
       ],
     },
     {
       label: 'Back-end & données',
-      items: ['Node.js', 'TypeORM', 'GraphQL', 'MongoDB'],
+      items: [
+        'Node.js',
+        'NestJS',
+        'TypeORM',
+        'Prisma',
+        'PostgreSQL',
+        'MongoDB',
+        'Architecture microservices',
+      ],
     },
     {
       label: 'Qualité & delivery',
-      items: ['Git (GitHub, GitLab)', 'CI/CD', 'Jest', 'TDD', 'DDD', 'Scrum / agile', 'Jira'],
+      items: [
+        'Git (GitHub, GitLab)',
+        'CI/CD',
+        'Datadog',
+        'Jest',
+        'TDD',
+        'DDD',
+        'Scrum / agile',
+        'Jira',
+      ],
     },
     {
       label: 'IA & développement',
@@ -77,6 +94,7 @@ export const cvFr: CvBundle = {
         'Gestion de projet',
         'Management d’équipe',
         'Propriété intellectuelle & contrats',
+        'RGPD',
       ],
     },
   ],
@@ -87,7 +105,7 @@ export const cvFr: CvBundle = {
       location: 'Paris (Île-de-France)',
       period: 'Sept. 2025 — Présent',
       stack:
-        'TypeScript, JavaScript, React, Material UI, DDD, tests unitaires et d’intégration, CI/CD (pipeline et pratiques de l’équipe).',
+        'TypeScript, JavaScript, React, Material UI, TanStack, NestJS, Prisma, PostgreSQL, architecture microservices, DDD, tests unitaires et d’intégration, monitoring Datadog, workflows IA, CI/CD (pipeline et pratiques de l’équipe).',
       bullets: [
         'Développement full stack sur le produit SaaS à destination des professionnels de santé et des organisations.',
         'Participation au cycle de delivery : qualité, revues de code, tests unitaires et d’intégration, collaboration avec le produit et l’engineering.',
@@ -100,12 +118,12 @@ export const cvFr: CvBundle = {
       location: 'Marseille',
       period: 'Avr. 2022 — Oct. 2025',
       stack:
-        'JavaScript, TypeScript, React, Material UI, Node.js, NestJS, PostgreSQL, DDD, tests in-memory (domaine), tests unitaires, d’intégration, d’API et end-to-end (e2e).',
+        'JavaScript, TypeScript, React, Material UI, Node.js, NestJS, PostgreSQL, DDD, tests unitaires, d’intégration, d’API et end-to-end (e2e).',
       bullets: [
         'Développement full stack sur des applicatifs et services au service du parcours de soin (medtech, dispositifs et solutions associées).',
         'Migration de la persistance des données depuis AWS vers PostgreSQL.',
         'Mise en place de NestJS comme framework applicatif sur Node.js (périmètre concerné).',
-        'Tests automatisés : in-memory sur le domaine (DDD), unitaires, d’intégration, d’API et e2e ; industrialisation des parcours utilisateurs, suivi de la dette technique ; collaboration produit et engineering en livraisons itératives.',
+        'Tests automatisés : unitaires, d’intégration, d’API et e2e ; industrialisation des parcours utilisateurs, suivi de la dette technique ; collaboration produit et engineering en livraisons itératives.',
       ],
     },
     {

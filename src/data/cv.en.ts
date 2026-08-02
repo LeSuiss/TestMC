@@ -26,11 +26,13 @@ export const cvEn: CvBundle = {
     headline:
       'Full-stack JavaScript developer · legal perspective & project management available when the context calls for it',
     location: 'Aubagne, Provence-Alpes-Côte d’Azur, France',
+    nationality: 'Nationalities: Swiss, French',
+    mobility: 'Open to roles in French-speaking Switzerland',
     linkedinUrl: cvContactChannels.linkedinUrl,
   },
   profileParagraphs: [
-    'Full-stack developer with 6+ years’ experience building web and mobile applications in demanding product environments (medtech, retail, health & HR SaaS). Comfortable with software quality expectations, code review, and agile delivery with product teams.',
-    'I am looking for full-stack roles in product-led teams with regular release cadences, a strong feedback culture, and ongoing collaboration with business stakeholders.',
+    'Over 6 years’ experience designing and evolving web and mobile applications in demanding product environments (medtech, retail, health & HR SaaS). Comfortable with software quality expectations, code review, and agile delivery within product teams.',
+    'I am looking to join a product-led team with regular delivery cycles, a strong feedback culture, and close collaboration with business stakeholders, especially in French-speaking Switzerland.',
   ],
   languages: [
     { name: 'French', level: 'native' },
@@ -51,18 +53,33 @@ export const cvEn: CvBundle = {
         'TypeScript',
         'Redux',
         'Material UI',
-        'GraphQL / Apollo',
-        'Sass',
-        'Webpack',
+        'TanStack',
       ],
     },
     {
       label: 'Back-end & data',
-      items: ['Node.js', 'TypeORM', 'GraphQL', 'MongoDB'],
+      items: [
+        'Node.js',
+        'NestJS',
+        'TypeORM',
+        'Prisma',
+        'PostgreSQL',
+        'MongoDB',
+        'Microservices architecture',
+      ],
     },
     {
       label: 'Quality & delivery',
-      items: ['Git (GitHub, GitLab)', 'CI/CD', 'Jest', 'TDD', 'DDD', 'Scrum / agile', 'Jira'],
+      items: [
+        'Git (GitHub, GitLab)',
+        'CI/CD',
+        'Datadog',
+        'Jest',
+        'TDD',
+        'DDD',
+        'Scrum / agile',
+        'Jira',
+      ],
     },
     {
       label: 'AI & development',
@@ -77,6 +94,7 @@ export const cvEn: CvBundle = {
         'Project management',
         'Team management',
         'Intellectual property & contracts',
+        'GDPR',
       ],
     },
   ],
@@ -87,7 +105,7 @@ export const cvEn: CvBundle = {
       location: 'Paris, France',
       period: 'Sep 2025 – Present',
       stack:
-        'TypeScript, JavaScript, React, Material UI, DDD, unit and integration tests, CI/CD (team pipeline and practices).',
+        'TypeScript, JavaScript, React, Material UI, TanStack, NestJS, Prisma, PostgreSQL, microservices architecture, DDD, unit and integration tests, Datadog monitoring, AI workflows, CI/CD (team pipeline and practices).',
       bullets: [
         'Full-stack development on the SaaS product for healthcare professionals and organizations.',
         'Involvement in the delivery cycle: quality, code reviews, unit and integration tests, collaboration with product and engineering.',
@@ -100,12 +118,12 @@ export const cvEn: CvBundle = {
       location: 'Marseille, France',
       period: 'Apr 2022 – Oct 2025',
       stack:
-        'JavaScript, TypeScript, React, Material UI, Node.js, NestJS, PostgreSQL, DDD, in-memory domain tests, unit, integration, API, and end-to-end (e2e) tests.',
+        'JavaScript, TypeScript, React, Material UI, Node.js, NestJS, PostgreSQL, DDD, unit, integration, API, and end-to-end (e2e) tests.',
       bullets: [
         'Full-stack development on applications and services supporting the care pathway (medtech, devices and related solutions).',
         'Migrated data persistence from AWS to PostgreSQL.',
         'Introduced NestJS as the application framework on Node.js (relevant scope).',
-        'Automated testing: in-memory domain tests (DDD), unit, integration, API, and e2e; hardened user journeys, technical debt management; collaboration with product and engineering in iterative delivery.',
+        'Automated testing: unit, integration, API, and e2e; hardened user journeys, technical debt management; collaboration with product and engineering in iterative delivery.',
       ],
     },
     {
