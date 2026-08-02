@@ -73,6 +73,8 @@ export const cvFr: CvBundle = {
       items: [
         'Git (GitHub, GitLab)',
         'CI/CD',
+        'Docker',
+        'Kubernetes',
         'Datadog',
         'Jest',
         'TDD',
@@ -105,7 +107,7 @@ export const cvFr: CvBundle = {
       location: 'Paris (Île-de-France)',
       period: 'Sept. 2025 — Présent',
       stack:
-        'TypeScript, JavaScript, React, Material UI, TanStack, NestJS, Prisma, PostgreSQL, architecture microservices, DDD, tests unitaires et d’intégration, monitoring Datadog, workflows IA, CI/CD (pipeline et pratiques de l’équipe).',
+        'TypeScript, JavaScript, React, Material UI, TanStack, NestJS, Prisma, PostgreSQL, Docker, Kubernetes, architecture microservices, DDD, tests unitaires et d’intégration, monitoring Datadog, workflows IA, CI/CD (pipeline et pratiques de l’équipe).',
       bullets: [
         'Ownership de bout en bout de fonctionnalités du SaaS santé : cadrage avec le PM, le product designer, les métiers et les équipes techniques, conception, implémentation, déploiement, monitoring Datadog et suivi en production.',
         'Mise en place d’une suite de tests d’intégration dockerisée couvrant l’intégralité du microservice de l’équipe, complétée par des tests unitaires.',

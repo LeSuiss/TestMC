@@ -73,6 +73,8 @@ export const cvEn: CvBundle = {
       items: [
         'Git (GitHub, GitLab)',
         'CI/CD',
+        'Docker',
+        'Kubernetes',
         'Datadog',
         'Jest',
         'TDD',
@@ -105,7 +107,7 @@ export const cvEn: CvBundle = {
       location: 'Paris, France',
       period: 'Sep 2025 – Present',
       stack:
-        'TypeScript, JavaScript, React, Material UI, TanStack, NestJS, Prisma, PostgreSQL, microservices architecture, DDD, unit and integration tests, Datadog monitoring, AI workflows, CI/CD (team pipeline and practices).',
+        'TypeScript, JavaScript, React, Material UI, TanStack, NestJS, Prisma, PostgreSQL, Docker, Kubernetes, microservices architecture, DDD, unit and integration tests, Datadog monitoring, AI workflows, CI/CD (team pipeline and practices).',
       bullets: [
         'End-to-end ownership of features for a healthcare SaaS product: scoping with the product manager, product designer, business stakeholders, and engineering teams; design, implementation, deployment, Datadog monitoring, and production follow-up.',
         'Built a Dockerized integration test suite covering the team’s entire microservice, complemented by unit tests.',
