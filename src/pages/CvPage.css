@@ -523,7 +523,7 @@
 @media print {
   @page {
     size: A4;
-    margin: 10mm;
+    margin: 5mm 10mm;
   }
 
   html,
@@ -586,6 +586,11 @@
   }
 
   .cv-job {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .cv-sidebar > section {
     break-inside: avoid-page;
     page-break-inside: avoid;
   }

@@ -7,7 +7,7 @@ export const cvEn: CvBundle = {
     documentTitle: 'Resume — Alexis Archer',
     exportPdf: 'Export as PDF',
     exportHint:
-      'Choose « Save as PDF », A4. Turn off « Headers and footers » (Chrome / Edge: More settings) so the date, document title, localhost URL, and page numbers (e.g. 1/2) are not printed. Adjust margins to fit two pages.',
+      'In Chrome or Edge, choose « Save as PDF » in A4 format. The date, URL, and page numbers are hidden automatically.',
     profile: 'Profile',
     skills: 'Skills',
     languages: 'Languages',
@@ -24,15 +24,15 @@ export const cvEn: CvBundle = {
   contact: {
     fullName: 'Alexis Archer',
     headline:
-      'Full-stack JavaScript developer · legal perspective & project management available when the context calls for it',
+      'Full-stack developer · AI augmented',
     location: 'Aubagne, Provence-Alpes-Côte d’Azur, France',
     nationality: 'Nationalities: Swiss, French',
     mobility: 'Open to roles in French-speaking Switzerland',
     linkedinUrl: cvContactChannels.linkedinUrl,
   },
   profileParagraphs: [
-    'Over 6 years’ experience designing and evolving web and mobile applications in demanding product environments (medtech, retail, health & HR SaaS). Comfortable with software quality expectations, code review, and agile delivery within product teams.',
-    'I am looking to join a product-led team with regular delivery cycles, a strong feedback culture, and close collaboration with business stakeholders, especially in French-speaking Switzerland.',
+    'Full-stack JavaScript/TypeScript developer across web and mobile applications, including medtech and health & HR SaaS. I use generative AI, coding assistants, and agentic workflows in my development work.',
+    'At Hublo, I own features end to end, from product scoping to production follow-up. I am looking to bring this experience to a product team, especially in French-speaking Switzerland.',
   ],
   languages: [
     { name: 'French', level: 'native' },
