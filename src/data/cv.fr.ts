@@ -7,7 +7,7 @@ export const cvFr: CvBundle = {
     documentTitle: 'CV — Alexis Archer',
     exportPdf: 'Exporter en PDF',
     exportHint:
-      'Destination « Enregistrer au format PDF », format A4. Désactive l’option « En-têtes et pieds de page » (Chrome / Edge : plus d’options) pour ne pas imprimer la date, le titre du document ni l’URL (localhost) ni « 1/2 » en bas. Ajuste les marges pour tenir sur deux pages.',
+      'Dans Chrome ou Edge, choisis « Enregistrer au format PDF » au format A4. La date, l’URL et la pagination sont masquées automatiquement.',
     profile: 'Profil',
     skills: 'Compétences',
     languages: 'Langues',

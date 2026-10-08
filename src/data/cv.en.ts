@@ -7,7 +7,7 @@ export const cvEn: CvBundle = {
     documentTitle: 'Resume — Alexis Archer',
     exportPdf: 'Export as PDF',
     exportHint:
-      'Choose « Save as PDF », A4. Turn off « Headers and footers » (Chrome / Edge: More settings) so the date, document title, localhost URL, and page numbers (e.g. 1/2) are not printed. Adjust margins to fit two pages.',
+      'In Chrome or Edge, choose « Save as PDF » in A4 format. The date, URL, and page numbers are hidden automatically.',
     profile: 'Profile',
     skills: 'Skills',
     languages: 'Languages',
