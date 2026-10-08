@@ -590,6 +590,11 @@
     page-break-inside: avoid;
   }
 
+  .cv-sidebar > section {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
   .cv-job-header,
   .cv-job-stack,
   .cv-job-bullets li {
