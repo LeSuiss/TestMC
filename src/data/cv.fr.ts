@@ -24,14 +24,14 @@ export const cvFr: CvBundle = {
   contact: {
     fullName: 'Alexis Archer',
     headline:
-      'Développeur full stack JavaScript/TypeScript · 6+ ans d’expérience · IA générative et agents',
+      'Développeur full stack · AI augmented',
     location: 'Aubagne, Provence-Alpes-Côte d’Azur, France',
     nationality: 'Nationalités : suisse, française',
     mobility: 'Ouvert à un poste en Suisse romande',
     linkedinUrl: cvContactChannels.linkedinUrl,
   },
   profileParagraphs: [
-    'Plus de 6 ans d’expérience en développement full stack JavaScript/TypeScript sur des applications web et mobiles, notamment en medtech et en SaaS santé/RH. J’utilise l’IA générative, les assistants de code et les workflows agentiques dans mon travail de développement.',
+    'Développeur full stack JavaScript/TypeScript sur des applications web et mobiles, notamment en medtech et en SaaS santé/RH. J’utilise l’IA générative, les assistants de code et les workflows agentiques dans mon travail de développement.',
     'Chez Hublo, je prends en charge des fonctionnalités de bout en bout, du cadrage avec le produit au suivi en production. Je souhaite apporter cette expérience à une équipe produit, notamment en Suisse romande.',
   ],
   languages: [
